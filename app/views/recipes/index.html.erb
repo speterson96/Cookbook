@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Ingrediants</th>
+      <th>Category</th>
+      <th>Ingredients</th>
       <th>Instructions</th>
       <th>Last Updated</th>
       <th colspan="4"></th>
@@ -18,6 +19,7 @@
     <% @recipes.each do |recipe| %>
       <tr>
         <td><%= recipe.title %></td>
+        <td><%= recipe.category.name rescue "No category" %></td>
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.instructions %></td>
         <td><%= time_ago_in_words(recipe.updated_at) %> ago</td>
