@@ -5,7 +5,11 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    if params[:q]
+      @recipes = Recipe.find_all_by_query(params[:q])
+    else
+      @recipes = Recipe.all
+    end
     @title = 'Recipie'
   end
   
@@ -31,10 +35,13 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
-    if @recipe.save
-      redirect_to @recipe, notice: 'Recipe was successfully created.'
-    else
-      render action: 'new'
+    
+    respond_to do |format|
+      if @recipe.save
+        redirect_to @recipe, notice: 'Recipe was successfully created.'
+      else
+        render action: 'new'
+      end
     end
   end
 
