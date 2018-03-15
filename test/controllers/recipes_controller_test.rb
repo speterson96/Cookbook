@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class RecipesControllerTest < ActionController::TestCase
+
   setup do
     login 'admin', 'password'
     @recipe = recipes(:one)

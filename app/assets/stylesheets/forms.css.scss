@@ -1,4 +1,6 @@
 $errorColor: #c00;
+$text-width: 200px;
+$text-height: 40px;
 
 div.field, div.actions {
   margin-bottom: 10px;
@@ -22,4 +24,29 @@ div.field, div.actions {
     margin: 0;
     padding: 5px 5px 5px 15px;
   }
+}
+
+#recipe_title{
+  height: $text-height;
+  width: $text-width;
+}
+
+#recipe_title{
+  height: $text-height;
+  width: $text-width;
+}
+
+#recipe_ingredients{
+  height: $text-height;
+  width: $text-width;
+}
+
+#recipe_instructions{
+  height: $text-height;
+  width: $text-width;
+}
+
+#recipe_calories{
+  height: $text-height;
+  width: $text-width;
 }
