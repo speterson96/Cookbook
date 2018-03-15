@@ -35,10 +35,13 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
-    if @recipe.save
-      redirect_to @recipe, notice: 'Recipe was successfully created.'
-    else
-      render action: 'new'
+    
+    respond_to do |format|
+      if @recipe.save
+        redirect_to @recipe, notice: 'Recipe was successfully created.'
+      else
+        render action: 'new'
+      end
     end
   end
 
