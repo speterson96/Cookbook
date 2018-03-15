@@ -1,0 +1,17 @@
+<article>
+  <header>
+    <h1>Category:</h1>
+    <h2><%= @category.name %></h2>
+      <% @recipes.each do |recipe| %>
+        <p>
+          <tr>
+            <td><%= recipe.title %></td>
+          <tr>
+        </p>
+      <% end %>    
+    [ <%= link_to 'Edit', edit_category_path(@category) %> ]
+  </header>
+
+</article>
+
+<p><%= link_to 'Back', categories_path %></p>

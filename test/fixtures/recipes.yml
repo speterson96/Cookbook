@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  ingredients: MyText
-  instructions: MyText
+  title: "Toast"
+  ingredients: "Bread"
+  instructions: "Toaster"
 
 two:
-  title: MyString
-  ingredients: MyText
-  instructions: MyText
+  title: "Chips"
+  ingredients: "Bag of Chips"
+  instructions: "Open bag carefully and enjoy"

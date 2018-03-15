@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <h4 style="color: red">All fields are required</h4>
+  
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -22,6 +24,14 @@
   <div class="field">
     <%= f.label :instructions %><br>
     <%= f.text_area :instructions %>
+  </div>
+  <div class="field">
+    <%= f.label :calories %><br>
+    <%= f.text_area :calories %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.select :category_id, @categories, :include_blank => true %>
   </div>
   <div class="actions">
     <%= f.submit %>
